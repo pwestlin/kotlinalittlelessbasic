@@ -65,6 +65,10 @@ internal class ScopingFunctionsTest {
         Don’t use also() if your block needs to return a different value.
 
         also() is very handy when executing some side effects on an object or validating its data before assigning it to a property.
+
+
+        Ett exempel på när man kan använda also är när man i ett JDBC-test vill skapa ett objekt, lagra det i DB och sedan tilldela det till en variabel:
+        val user = User("foo", "Fo", "O").also { repository.create(it) }
          */
     }
 
